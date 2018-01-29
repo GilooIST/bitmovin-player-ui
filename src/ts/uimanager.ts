@@ -482,7 +482,7 @@ export namespace UIManager.Factory {
         controlBar,
         new TitleBar(),
         new RecommendationOverlay(),
-        new Watermark(),
+        // new Watermark(),
         new ErrorMessageOverlay(),
         new HugeReplayButton(),
         new HugePlaybackToggleButton()
