@@ -39,30 +39,30 @@ export class SubtitleSettingsPanel extends SettingsPanel {
         new SettingsPanelItem('Font size', new FontSizeSelectBox({
           overlay: this.overlay, settingsManager: manager,
         })),
-        new SettingsPanelItem('Font family', new FontFamilySelectBox({
-          overlay: this.overlay, settingsManager: manager,
-        })),
-        new SettingsPanelItem('Font color', new FontColorSelectBox({
-          overlay: this.overlay, settingsManager: manager,
-        })),
-        new SettingsPanelItem('Font opacity', new FontOpacitySelectBox({
-          overlay: this.overlay, settingsManager: manager,
-        })),
-        new SettingsPanelItem('Character edge', new CharacterEdgeSelectBox({
-          overlay: this.overlay, settingsManager: manager,
-        })),
-        new SettingsPanelItem('Background color', new BackgroundColorSelectBox({
-          overlay: this.overlay, settingsManager: manager,
-        })),
-        new SettingsPanelItem('Background opacity', new BackgroundOpacitySelectBox({
-          overlay: this.overlay, settingsManager: manager,
-        })),
-        new SettingsPanelItem('Window color', new WindowColorSelectBox({
-          overlay: this.overlay, settingsManager: manager,
-        })),
-        new SettingsPanelItem('Window opacity', new WindowOpacitySelectBox({
-          overlay: this.overlay, settingsManager: manager,
-        })),
+        // new SettingsPanelItem('Font family', new FontFamilySelectBox({
+        //   overlay: this.overlay, settingsManager: manager,
+        // })),
+        // new SettingsPanelItem('Font color', new FontColorSelectBox({
+        //   overlay: this.overlay, settingsManager: manager,
+        // })),
+        // new SettingsPanelItem('Font opacity', new FontOpacitySelectBox({
+        //   overlay: this.overlay, settingsManager: manager,
+        // })),
+        // new SettingsPanelItem('Character edge', new CharacterEdgeSelectBox({
+        //   overlay: this.overlay, settingsManager: manager,
+        // })),
+        // new SettingsPanelItem('Background color', new BackgroundColorSelectBox({
+        //   overlay: this.overlay, settingsManager: manager,
+        // })),
+        // new SettingsPanelItem('Background opacity', new BackgroundOpacitySelectBox({
+        //   overlay: this.overlay, settingsManager: manager,
+        // })),
+        // new SettingsPanelItem('Window color', new WindowColorSelectBox({
+        //   overlay: this.overlay, settingsManager: manager,
+        // })),
+        // new SettingsPanelItem('Window opacity', new WindowOpacitySelectBox({
+        //   overlay: this.overlay, settingsManager: manager,
+        // })),
         new SettingsPanelItem(new SubtitleSettingsCloseButton({
           subtitleSettingsPanel: this, settingsPanel: config.settingsPanel,
         }), new SubtitleSettingsResetButton({
