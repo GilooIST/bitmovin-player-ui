@@ -8,15 +8,16 @@ export class FontSizeSelectBox extends SubtitleSettingSelectBox {
 
   configure(player: bitmovin.PlayerAPI, uimanager: UIInstanceManager): void {
     super.configure(player, uimanager);
-
-    this.addItem(null, 'default');
-    this.addItem('50', '50%');
-    this.addItem('75', '75%');
-    this.addItem('100', '100%');
-    this.addItem('150', '150%');
-    this.addItem('200', '200%');
-    this.addItem('300', '300%');
-    this.addItem('400', '400%');
+    
+    // The corresponding font-size setting, we need to set value in css
+    this.addItem('170', '預設');
+    // this.addItem('50', '50%');
+    this.addItem('140', '縮小');
+    // this.addItem('100', '100%');
+    this.addItem('200', '放大');
+    // this.addItem('200', '200%');
+    // this.addItem('300', '300%');
+    // this.addItem('400', '400%');
 
     this.settingsManager.fontSize.onChanged.subscribe((sender, property) => {
       if (property.isSet()) {
