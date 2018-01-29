@@ -77,21 +77,21 @@ gulp.task('clean', function() {
   return del([paths.target.html]);
 });
 
-// TypeScript linting
-gulp.task('lint-ts', function() {
-  // The program is required for type checking rules to work: https://palantir.github.io/tslint/usage/type-checking/
-  var program = nativeTslint.Linter.createProgram("./tsconfig.json");
+// // TypeScript linting
+// gulp.task('lint-ts', function() {
+//   // The program is required for type checking rules to work: https://palantir.github.io/tslint/usage/type-checking/
+//   var program = nativeTslint.Linter.createProgram("./tsconfig.json");
 
-  return gulp.src(paths.source.ts)
-  .pipe(tslint({
-    formatter: 'verbose',
-    program: program,
-  }))
-  .pipe(tslint.report({
-    // Print just the number of errors (instead of printing all errors again)
-    summarizeFailureOutput: true
-  }))
-});
+//   return gulp.src(paths.source.ts)
+//   .pipe(tslint({
+//     formatter: 'verbose',
+//     program: program,
+//   }))
+//   .pipe(tslint.report({
+//     // Print just the number of errors (instead of printing all errors again)
+//     summarizeFailureOutput: true
+//   }))
+// });
 
 // Sass/SCSS linting
 gulp.task('lint-sass', function() {
@@ -106,11 +106,11 @@ gulp.task('lint-sass', function() {
 });
 
 // Runs all linters
-gulp.task('lint', function(callback) {
-  // this fails at first error so we can't run all linters sequentially with runSequence and then print the errors
-  runSequence('lint-ts', 'lint-sass', callback);
-  // TODO check in Gulp 4.0 if all linters can be run sequentially before aborting due to an error
-});
+// gulp.task('lint', function(callback) {
+//   // this fails at first error so we can't run all linters sequentially with runSequence and then print the errors
+//   runSequence('lint-ts', 'lint-sass', callback);
+//   // TODO check in Gulp 4.0 if all linters can be run sequentially before aborting due to an error
+// });
 
 // Copies html files to the target directory
 gulp.task('html', function() {
@@ -192,7 +192,8 @@ gulp.task('build', function(callback) {
 
 gulp.task('build-prod', function(callback) {
   production = true;
-  runSequence('lint', 'build', callback);
+  // runSequence('lint', 'build', callback);
+  runSequence('build', callback);
 });
 
 gulp.task('default', ['build']);
