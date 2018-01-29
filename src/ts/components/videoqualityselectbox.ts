@@ -38,7 +38,7 @@ export class VideoQualitySelectBox extends SelectBox {
 
       if (this.hasAuto) {
         // Add entry for automatic quality switching (default setting)
-        this.addItem('auto', 'auto');
+        this.addItem('auto', '自動');
       }
 
       // Add video qualities

@@ -418,10 +418,10 @@ export namespace UIManager.Factory {
 
     let settingsPanel = new SettingsPanel({
       components: [
-        new SettingsPanelItem('Video Quality', new VideoQualitySelectBox()),
-        new SettingsPanelItem('Speed', new PlaybackSpeedSelectBox()),
-        new SettingsPanelItem('Audio Track', new AudioTrackSelectBox()),
-        new SettingsPanelItem('Audio Quality', new AudioQualitySelectBox()),
+        new SettingsPanelItem('畫質', new VideoQualitySelectBox()),
+        new SettingsPanelItem('速度', new PlaybackSpeedSelectBox()),
+        //new SettingsPanelItem('Audio Track', new AudioTrackSelectBox()),
+        new SettingsPanelItem('音質', new AudioQualitySelectBox()),
       ],
       hidden: true,
     });
@@ -439,7 +439,7 @@ export namespace UIManager.Factory {
 
     settingsPanel.addComponent(
       new SettingsPanelItem(
-        new SubtitleSettingsLabel({text: 'Subtitles', opener: subtitleSettingsOpenButton}),
+        new SubtitleSettingsLabel({text: '字幕', opener: subtitleSettingsOpenButton}),
         new SubtitleSelectBox()
     ));
 

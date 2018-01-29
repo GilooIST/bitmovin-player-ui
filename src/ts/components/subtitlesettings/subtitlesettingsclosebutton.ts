@@ -12,7 +12,7 @@ export class SubtitleSettingsCloseButton extends SubtitleSettingsButton {
 
     this.config = this.mergeConfig(config, {
       cssClass: 'ui-subtitlesettingsclosebutton',
-      text: 'Back',
+      text: '返回',
     }, this.config);
   }
 

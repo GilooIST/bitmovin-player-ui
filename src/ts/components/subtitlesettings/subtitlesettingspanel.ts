@@ -36,7 +36,7 @@ export class SubtitleSettingsPanel extends SettingsPanel {
 
     this.config = this.mergeConfig(config, {
       components: <Component<ComponentConfig>[]>[
-        new SettingsPanelItem('Font size', new FontSizeSelectBox({
+        new SettingsPanelItem('字體大小', new FontSizeSelectBox({
           overlay: this.overlay, settingsManager: manager,
         })),
         // new SettingsPanelItem('Font family', new FontFamilySelectBox({
