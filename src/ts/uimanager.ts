@@ -50,6 +50,8 @@ import {Spacer} from './components/spacer';
 import {UIUtils} from './uiutils';
 import {ArrayUtils} from './arrayutils';
 import {BrowserUtils} from './browserutils';
+import {HugeReplayButton} from './components/hugereplaybutton';
+import {HugePlaybackToggleButton} from './components/hugeplaybacktogglebutton';
 
 export interface UIRecommendationConfig {
   title: string;
@@ -448,8 +450,8 @@ export namespace UIManager.Factory {
         new Container({
           components: [
             new PlaybackTimeLabel({ timeLabelMode: PlaybackTimeLabelMode.CurrentTime, hideInLivePlayback: true }),
-            new SeekBar({ label: new SeekBarLabel() }),
-            new PlaybackTimeLabel({ timeLabelMode: PlaybackTimeLabelMode.TotalTime, cssClasses: ['text-right'] }),
+            new SeekBar({ label: new SeekBarLabel() })
+            // new PlaybackTimeLabel({ timeLabelMode: PlaybackTimeLabelMode.TotalTime, cssClasses: ['text-right'] }),
           ],
           cssClasses: ['controlbar-top'],
         }),
@@ -460,9 +462,9 @@ export namespace UIManager.Factory {
             new VolumeSlider(),
             new Spacer(),
             new PictureInPictureToggleButton(),
-            new AirPlayToggleButton(),
-            new CastToggleButton(),
-            new VRToggleButton(),
+            // new AirPlayToggleButton(),
+            // new CastToggleButton(),
+            // new VRToggleButton(),
             new SettingsToggleButton({ settingsPanel: settingsPanel }),
             new FullscreenToggleButton(),
           ],
@@ -482,6 +484,8 @@ export namespace UIManager.Factory {
         new RecommendationOverlay(),
         new Watermark(),
         new ErrorMessageOverlay(),
+        new HugeReplayButton(),
+        new HugePlaybackToggleButton()
       ],
       cssClasses: ['ui-skin-modern'],
     });
