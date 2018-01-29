@@ -421,7 +421,7 @@ export namespace UIManager.Factory {
         new SettingsPanelItem('畫質', new VideoQualitySelectBox()),
         new SettingsPanelItem('速度', new PlaybackSpeedSelectBox()),
         //new SettingsPanelItem('Audio Track', new AudioTrackSelectBox()),
-        new SettingsPanelItem('音質', new AudioQualitySelectBox()),
+        // new SettingsPanelItem('音質', new AudioQualitySelectBox()),
       ],
       hidden: true,
     });
