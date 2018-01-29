@@ -16,7 +16,7 @@ export class PlaybackSpeedSelectBox extends SelectBox {
 
     this.addItem('0.25', '0.25x');
     this.addItem('0.5', '0.5x');
-    this.addItem('1', 'Normal');
+    this.addItem('1', '正常');
     this.addItem('1.5', '1.5x');
     this.addItem('2', '2x');
 
