@@ -46,9 +46,14 @@ export class VolumeSlider extends SeekBar {
       if (player.isMuted()) {
         this.setPlaybackPosition(0);
         this.setBufferPosition(0);
-      } else {
+      }
+      else if(player.getVolume() == 0) {
+        this.setPlaybackPosition(0);
+        this.setBufferPosition(0);
+        player.mute();
+      } 
+      else {
         this.setPlaybackPosition(player.getVolume());
-
         this.setBufferPosition(player.getVolume());
       }
     };
