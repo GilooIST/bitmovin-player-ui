@@ -48,6 +48,7 @@ export class VolumeSlider extends SeekBar {
         this.setBufferPosition(0);
       }
       else if(player.getVolume() == 0) {
+        // 當音量拉霸拉到零時，聲音應該改為靜音
         this.setPlaybackPosition(0);
         this.setBufferPosition(0);
         player.mute();
