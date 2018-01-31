@@ -41,12 +41,13 @@ export class FontSizeSelectBox extends SubtitleSettingSelectBox {
     this.settingsManager.fontSize.onChanged.subscribe((sender, property) => {
       if (property.isSet()) {
         this.toggleOverlayClass('fontsize-' + property.value);
+        this.selectItem(property.value);
       } else {
-        this.toggleOverlayClass(null);
+        this.toggleOverlayClass('fontsize-' + fontValue[0].value );
+        this.selectItem(fontValue[0].value);
       }
 
       // Select the item in case the property was set from outside
-      this.selectItem(property.value);
     });
 
     this.onItemSelected.subscribe((sender, key: string) => {
