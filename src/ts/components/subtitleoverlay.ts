@@ -54,7 +54,8 @@ export class SubtitleOverlay extends Container<ContainerConfig> {
       }
 
       let labelToAdd = subtitleManager.cueEnter(event);
-
+      //console.log("labelToAdd:");
+      //console.log(labelToAdd);
       this.preprocessLabelEventCallback.dispatch(event, labelToAdd);
 
       if (this.previewSubtitleActive) {
