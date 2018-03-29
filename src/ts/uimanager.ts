@@ -461,7 +461,7 @@ export namespace UIManager.Factory {
             new VolumeToggleButton(),
             new VolumeSlider(),
             new Spacer(),
-            new PictureInPictureToggleButton(),
+            // new PictureInPictureToggleButton(),
             // new AirPlayToggleButton(),
             // new CastToggleButton(),
             // new VRToggleButton(),
